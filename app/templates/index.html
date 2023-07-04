@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Amazon vs Mercado Livre</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="hero">
+    <img src="https://media.licdn.com/dms/image/D4E12AQGIsGc_dLSuCQ/article-cover_image-shrink_720_1280/0/1666032438915?e=1693440000&v=beta&t=jsPIgZQZxoKSrECGSCbgMb-27fFJ01X8wVrq4XR5jHU" alt="Hero Image">
+    <div class="hero-text">
+      <h1>Mercado Livre vs Amazon</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <form action="/compare" method="POST">
+      <label for="product">Selecione um produto para comparar comentários do Mercado Livre e Amazon:</label>
+      <select id="product" name="product">
+        {% for item in items %}
+        <option value="{{ item }}">{{ item }}</option>
+        {% endfor %}
+      </select>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>

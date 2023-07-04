@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comparação Amazon vs Mercado Livre</title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="hero">
+    <img src="https://media.licdn.com/dms/image/D4E12AQGIsGc_dLSuCQ/article-cover_image-shrink_720_1280/0/1666032438915?e=1693440000&v=beta&t=jsPIgZQZxoKSrECGSCbgMb-27fFJ01X8wVrq4XR5jHU" alt="Hero Image">
+    <div class="hero-text">
+      <h1>Mercado Livre vs Amazon</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Produto selecionado: <span id="selected-item">{{ selected_item }}</span></h2>
+
+    <div class="comparison-container">
+      <div class="amazon-section">
+        <h3>Amazon</h3>
+        <div id="amazon-chart"></div>
+        <div class="chart-center-text">
+          <span id="amazon-score" class="score">-</span>
+        </div>
+        <p class="comment"><strong>Melhor comentário:</strong></p>
+        <p class="comment-text" id="amazon-highest-comment"></p>
+        <p class="comment"><strong>Pior comentário:</strong></p>
+        <p class="comment-text" id="amazon-lowest-comment"></p>
+      </div>
+
+      <div class="mercadolivre-section">
+        <h3>Mercado Livre</h3>
+        <div id="mercadolivre-chart"></div>
+        <div class="chart-center-text">
+          <span id="mercadolivre-score" class="score">-</span>
+        </div>
+        <p class="comment"><strong>Melhor comentário:</strong></p>
+        <p class="comment-text" id="mercadolivre-highest-comment"></p>
+        <p class="comment"><strong>Pior comentário:</strong></p>
+        <p class="comment-text" id="mercadolivre-lowest-comment"></p>
+      </div>
+    </div>
+
+    <p class="result">A melhor avaliação foi do site <span id="best-site"></span> com a pontuação <span id="best-score"></span></p>
+  </div>
+
+  <script src="{{ url_for('static', filename='chart.js') }}"></script>
+  <script>
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawCharts);
+
+    function drawCharts() {
+      var amazonScore = {{ amazon_average_score }};
+      var mercadolivreScore = {{ mercadolivre_average_score }};
+
+      var amazonData = google.visualization.arrayToDataTable([
+        ['Score', 'Percentage'],
+        ['Amazon Score', amazonScore],
+        ['Remaining', 100 - amazonScore]
+      ]);
+
+      var mercadolivreData = google.visualization.arrayToDataTable([
+        ['Score', 'Percentage'],
+        ['Mercado Livre Score', mercadolivreScore],
+        ['Remaining', 100 - mercadolivreScore]
+      ]);
+
+      var amazonOptions = {
+        title: 'Amazon Score',
+        pieHole: 0.8,
+        colors: ['#36A2EB', '#FFFFFF'],
+        legend: 'none',
+        enableInteractivity: false,
+        
+        chartArea: { width: '100%', height: '80%' },
+      };
+
+      var mercadolivreOptions = {
+        title: 'Mercado Livre Score',
+        pieHole: 0.8,
+        colors: ['#F0E68C', '#FFFFFF'],
+        legend: 'none',
+        enableInteractivity: false,
+        pieSliceText: 'none',
+        chartArea: { width: '100%', height: '80%' },
+      };
+
+      var amazonChart = new google.visualization.PieChart(document.getElementById('amazon-chart'));
+      var mercadolivreChart = new google.visualization.PieChart(document.getElementById('mercadolivre-chart'));
+
+      amazonChart.draw(amazonData, amazonOptions);
+      mercadolivreChart.draw(mercadolivreData, mercadolivreOptions);
+
+      document.getElementById("amazon-score").innerHTML = "<span class='score-bold'>" + amazonScore.toFixed(0) + "</span>";
+      document.getElementById("mercadolivre-score").innerHTML = "<span class='score-bold'>" + mercadolivreScore.toFixed(0) + "</span>";
+
+      var bestSiteElement = document.getElementById('best-site');
+      var bestScoreElement = document.getElementById('best-score');
+
+      if (amazonScore > mercadolivreScore) {
+        bestSiteElement.textContent = 'Amazon';
+        bestScoreElement.textContent = amazonScore.toFixed(0);
+      } else {
+        bestSiteElement.textContent = 'Mercado Livre';
+        bestScoreElement.textContent = mercadolivreScore.toFixed(0);
+      }
+
+      document.getElementById("amazon-highest-comment").innerHTML = "<em>&ldquo;" + "{{ amazon_highest_score_comment }}" + "&rdquo;</em>";
+      document.getElementById("amazon-lowest-comment").innerHTML = "<em>&ldquo;" + "{{ amazon_lowest_score_comment }}" + "&rdquo;</em>";
+      document.getElementById("mercadolivre-highest-comment").innerHTML = "<em>&ldquo;" + "{{ mercadolivre_highest_score_comment }}" + "&rdquo;</em>";
+      document.getElementById("mercadolivre-lowest-comment").innerHTML = "<em>&ldquo;" + "{{ mercadolivre_lowest_score_comment }}" + "&rdquo;</em>";
+    }
+  </script>
+</body>
+</html>

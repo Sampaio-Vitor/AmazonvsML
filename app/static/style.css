@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+  background: linear-gradient(to right, #ffde59, #15118a);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero img {
+  width: 25%;
+  height: auto;
+  max-width: 100px;
+}
+
+.hero-text {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+.comparison-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.amazon-section,
+.mercadolivre-section {
+  width: calc(50% - 20px);
+}
+
+.chart-container {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.result {
+  text-align: center;
+}
+
+.score-bold {
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+}
