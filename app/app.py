@@ -19,12 +19,12 @@ def calculate_sentiment_scores(df):
 
 # List of items
 items = ['smartphone', 'smart tv', 'smart tv box', 'disco', 'console de videogame', 'fones de ouvido sem fio',
-         'camera digital', 'tablet', 'smartwatch', 'joias', 'impressora', 'monitor', 'ssd', 'drone',
-         'caixa de som portatil', 'aparelho de barbear eletrico', 'relogio', 'social', 'oculos', 'teclado',
-         'mouse', 'maquina de cafe expresso', 'liquidificador', 'fritadeira', 'air fryer', 'aspirador',
-         'ferro de passar roupa', 'chapinha de cabelo', 'maquina', 'purificador de ar', 'ventilador',
+         'camera digital', 'tablet', 'smartwatch', 'joias', 'impressora', 'ssd', 'drone',
+         'caixa de som portatil', 'aparelho de barbear eletrico', 'oculos', 'teclado',
+         'mouse', 'maquina de cafe expresso', 'liquidificador', 'air fryer', 'aspirador',
+         'ferro de passar roupa', 'purificador de ar', 'ventilador',
          'ar-condicionado portatil', 'cadeira de escritorio', 'mochila', 'bolsa', 'tenis', 'calca jeans',
-         'sapatos sociais masculinos', 'mocassim', 'camiseta basica', 'vestido', 'perfume importado', 'tapete']
+         'sapatos sociais masculinos', 'mocassim', 'camiseta basica', 'vestido']
 
 # Get user input for the item selection
 selected_item = input("Select an item from the list: ")
