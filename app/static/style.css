@@ -86,3 +86,11 @@ h2 {
   justify-content: center;
   padding-left: 10px;
 }
+
+.form-row {
+  margin-bottom: 10px;
+}
+
+.explanation {
+  margin-bottom: 10px;
+}

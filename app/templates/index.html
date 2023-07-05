@@ -8,18 +8,27 @@
   <div class="hero">
     <img src="https://media.licdn.com/dms/image/D4E12AQGIsGc_dLSuCQ/article-cover_image-shrink_720_1280/0/1666032438915?e=1693440000&v=beta&t=jsPIgZQZxoKSrECGSCbgMb-27fFJ01X8wVrq4XR5jHU" alt="Hero Image">
     <div class="hero-text">
-      <h1>Mercado Livre vs Amazon</h1>
+      <h1>Amazon vs Mercado Livre</h1>
     </div>
   </div>
 
   <div class="container">
+    <div class="header">
+      <h1 class="title">Comparação de percepção da qualidade de produtos por clientes: Amazon vs Mercado Livre</h1><br><br>
+    </div>
+    <div class="explanation">
+      <p>O sistema de pontuação por análise de sentimentos compara os comentários exibidos após uma pesquisa de um certo termo. O objetivo é avaliar a percepção do cliente da qualidade dos primeiros produtos apresentados após uma dada pesquisa.</p>
+      <p>Tal análise é importante porque mostra a qualidade dos produtos que são exibidos para o cliente a partir de uma pesquisa.</p>
+      <p>Selecione na caixa abaixo o produto pesquisado, e então o algoritmo entregará uma análise de sentimento dos comentários para a mesma pesquisa em ambos sites.</p><br><br><br>
+    </div>
+
     <form action="/compare" method="POST">
-      <label for="product">Selecione um produto para comparar comentários do Mercado Livre e Amazon:</label>
+      <strong><label for="product">Selecione um produto para comparar comentários do Mercado Livre e Amazon:</label></strong><br><br>
       <select id="product" name="product">
         {% for item in items %}
         <option value="{{ item }}">{{ item }}</option>
         {% endfor %}
-      </select>
+      </select><br><br>
       <input type="submit" value="Submit">
     </form>
   </div>
