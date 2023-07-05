@@ -15,7 +15,7 @@
 
   <div class="container">
     <h2>Produto selecionado: <span id="selected-item">{{ selected_item }}</span></h2>
-
+    <p class="result">A melhor percepção de produtos por análise de sentimentos de comentários foi do site <strong><span id="best-site"></span></strong> com <strong><span id="best-score"></span></strong></p>
     <div class="comparison-container">
       <div class="amazon-section">
         <h3>Amazon</h3>
@@ -42,7 +42,7 @@
       </div>
     </div>
 
-    <p class="result">A melhor avaliação foi do site <span id="best-site"></span> com a pontuação <span id="best-score"></span></p>
+    
   </div>
 
   <script src="{{ url_for('static', filename='chart.js') }}"></script>
@@ -67,18 +67,19 @@
       ]);
 
       var amazonOptions = {
-        title: 'Amazon Score',
-        pieHole: 0.8,
+        pieSliceText: 'none',
+        pieHole: 0.6,
         colors: ['#36A2EB', '#FFFFFF'],
         legend: 'none',
         enableInteractivity: false,
+        
         
         chartArea: { width: '100%', height: '80%' },
       };
 
       var mercadolivreOptions = {
-        title: 'Mercado Livre Score',
-        pieHole: 0.8,
+        
+        pieHole: 0.6,
         colors: ['#F0E68C', '#FFFFFF'],
         legend: 'none',
         enableInteractivity: false,
@@ -92,8 +93,9 @@
       amazonChart.draw(amazonData, amazonOptions);
       mercadolivreChart.draw(mercadolivreData, mercadolivreOptions);
 
-      document.getElementById("amazon-score").innerHTML = "<span class='score-bold'>" + amazonScore.toFixed(0) + "</span>";
-      document.getElementById("mercadolivre-score").innerHTML = "<span class='score-bold'>" + mercadolivreScore.toFixed(0) + "</span>";
+      document.getElementById("amazon-score").innerHTML = "Score de sentimento dos comentários: <span class='score-bold'>" + amazonScore.toFixed(0) + "</span>";
+      document.getElementById("mercadolivre-score").innerHTML = "Score de sentimento dos comentários: <span class='score-bold'>" + mercadolivreScore.toFixed(0) + "</span>";
+
 
       var bestSiteElement = document.getElementById('best-site');
       var bestScoreElement = document.getElementById('best-score');

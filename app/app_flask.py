@@ -19,9 +19,9 @@ def calculate_sentiment_scores(df):
     return df
 
 # List of items
-items = ['smartphone', 'smart tv', 'smart tv box', 'disco', 'console de videogame', 'fones de ouvido sem fio',
-         'camera digital', 'tablet', 'smartwatch', 'joias', 'impressora', 'ssd', 'drone',
-         'caixa de som portatil', 'aparelho de barbear eletrico', 'oculos', 'teclado',
+items = ['smartphone', 'smart tv', 'console de videogame', 'fones de ouvido sem fio',
+         'camera digital', 'tablet', 'smartwatch', 'joias', 'impressora', 'drone',
+          'aparelho de barbear eletrico', 'oculos', 'teclado',
          'mouse', 'maquina de cafe expresso', 'liquidificador', 'air fryer', 'aspirador',
          'ferro de passar roupa', 'purificador de ar', 'ventilador',
          'ar-condicionado portatil', 'cadeira de escritorio', 'mochila', 'bolsa', 'tenis', 'calca jeans',
@@ -64,4 +64,4 @@ def compare():
                            mercadolivre_highest_score_comment=mercadolivre_highest_score_comment)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

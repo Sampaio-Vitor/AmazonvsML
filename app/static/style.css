@@ -46,9 +46,26 @@ h2 {
   margin-top: 30px;
 }
 
-.amazon-section,
-.mercadolivre-section {
-  width: calc(50% - 20px);
+.mercadolivre-section,
+.amazon-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+
+.mercadolivre-section h3,
+.amazon-section h3 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .chart-container {
@@ -63,7 +80,9 @@ h2 {
 }
 
 .score-bold {
-  font-size: 34px;
   font-weight: bold;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
 }
