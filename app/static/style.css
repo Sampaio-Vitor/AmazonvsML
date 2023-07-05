@@ -32,8 +32,9 @@ body {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 34px;
   margin: 0;
+  font-weight: bold;
 }
 
 h2 {
@@ -93,4 +94,25 @@ h2 {
 
 .explanation {
   margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-links img {
+  width: 32px;
+  height: 32px;
 }
