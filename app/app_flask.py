@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request
 import pandas as pd
 import numpy as np
+import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+nltk.download('vader_lexicon')
 
 app = Flask(__name__)
 
@@ -64,4 +66,4 @@ def compare():
                            mercadolivre_highest_score_comment=mercadolivre_highest_score_comment)
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run( host='0.0.0.0',port=8080)

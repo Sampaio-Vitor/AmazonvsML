@@ -7,12 +7,13 @@
 </head>
 <body>
   <div class="hero">
-    <img src="https://media.licdn.com/dms/image/D4E12AQGIsGc_dLSuCQ/article-cover_image-shrink_720_1280/0/1666032438915?e=1693440000&v=beta&t=jsPIgZQZxoKSrECGSCbgMb-27fFJ01X8wVrq4XR5jHU" alt="Hero Image">
+    <a href="{{ url_for('index') }}">
+      <img src="https://media.licdn.com/dms/image/D4E12AQGIsGc_dLSuCQ/article-cover_image-shrink_720_1280/0/1666032438915?e=1693440000&v=beta&t=jsPIgZQZxoKSrECGSCbgMb-27fFJ01X8wVrq4XR5jHU" alt="Hero Image">
+    </a>
     <div class="hero-text">
-      <h1>Mercado Livre vs Amazon</h1>
+      <h1>Amazon vs Mercado Livre</h1>
     </div>
   </div>
-
   <div class="container">
     <h2>Produto selecionado: <span id="selected-item">{{ selected_item }}</span></h2>
     <p class="result">A melhor percepção de produtos por análise de sentimentos de comentários foi do site <strong><span id="best-site"></span></strong> com <strong><span id="best-score"></span></strong></p>
@@ -39,6 +40,7 @@
         <p class="comment-text" id="mercadolivre-highest-comment"></p>
         <p class="comment"><strong>Pior comentário:</strong></p>
         <p class="comment-text" id="mercadolivre-lowest-comment"></p>
+        
       </div>
     </div>
 
@@ -114,5 +116,15 @@
       document.getElementById("mercadolivre-lowest-comment").innerHTML = "<em>&ldquo;" + "{{ mercadolivre_lowest_score_comment }}" + "&rdquo;</em>";
     }
   </script>
+  <footer>
+    <div class="social-links">
+      <a href="https://github.com/Sampaio-Vitor/AmazonvsML" target="_blank">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Icon" width="24" height="24">
+      </a>
+      <a href="https://www.linkedin.com/in/vitorcsampaio/" target="_blank">
+        <img src="https://www.citypng.com/public/uploads/preview/hd-linkedin-square-black-icon-transparent-background-11640440466zdofrsi3gy.png" alt="LinkedIn Icon" width="24" height="24">
+      </a>
+    </div>
+  </footer>
 </body>
 </html>

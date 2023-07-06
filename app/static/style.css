@@ -2,6 +2,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f2f2f2;
   margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -17,24 +18,24 @@ body {
   color: #fff;
   display: flex;
   align-items: center;
+  justify-content: flex-start; /* Alteração para flex-start */
   padding: 20px;
 }
 
 .hero img {
-  width: 25%;
-  height: auto;
-  max-width: 100px;
+  width: 100%; /* Defina a largura desejada para a imagem */
+  height: auto; /* Mantém a proporção da altura */
+  max-width: 100px; /* Defina o limite máximo de largura */
 }
 
 .hero-text {
-  flex-grow: 1;
   margin-left: 20px;
 }
 
 h1 {
   font-size: 34px;
-  margin: 0;
   font-weight: bold;
+  margin: 0;
 }
 
 h2 {
@@ -47,26 +48,21 @@ h2 {
   margin-top: 30px;
 }
 
-.mercadolivre-section,
-.amazon-section {
+.amazon-section,
+.mercadolivre-section {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 100%;
-  position: relative;
 }
 
-.mercadolivre-section h3,
-.amazon-section h3 {
+.amazon-section h3,
+.mercadolivre-section h3 {
   margin: 0;
   padding: 0;
   line-height: 1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .chart-container {
@@ -78,22 +74,20 @@ h2 {
 
 .result {
   text-align: center;
+  margin-top: 20px;
 }
 
 .score-bold {
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 10px;
 }
 
-.form-row {
-  margin-bottom: 10px;
+.comment {
+  margin-top: 10px;
 }
 
-.explanation {
-  margin-bottom: 10px;
+.comment-text {
+  margin: 0;
+  padding: 0;
 }
 
 footer {
@@ -105,6 +99,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 }
 
 .social-links a {
@@ -113,6 +108,6 @@ footer {
 }
 
 .social-links img {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
 }
