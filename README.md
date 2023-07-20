@@ -16,6 +16,9 @@ A aplicação deste projeto pode trazer diversos benefícios para as empresas qu
 
 Em suma, aplicar este projeto permite que as empresas tenham uma visão abrangente e atualizada sobre como os consumidores enxergam a qualidade dos produtos em plataformas de comércio eletrônico. Isso possibilita melhorias na experiência do cliente, tomadas de decisão mais embasadas e uma posição competitiva mais forte no mercado.
 
+## Landing page:
+
+![image](https://github.com/Sampaio-Vitor/AmazonvsML/assets/110466124/38995781-0be7-4291-aae6-12e5a9f6d04b)
 
 ## Funcionalidades
 - Webscraping de avaliações de produtos listados em um txt.
