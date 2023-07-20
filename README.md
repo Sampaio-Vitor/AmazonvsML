@@ -2,6 +2,21 @@
 
 Este projeto consiste em uma aplicação de machine learning com webscraping para comparar a análise de sentimentos de comentários de produtos na Amazon e no Mercado Livre. O objetivo é utilizar processamento de linguagem natural (NLP) para calcular os escores de sentimento dos comentários e comparar as médias desses escores entre as duas plataformas.
 
+## Possíveis ganhos ao aplicar este projeto
+
+A aplicação deste projeto pode trazer diversos benefícios para as empresas que atuam no comércio eletrônico. Ao analisar a percepção dos clientes e a qualidade dos produtos exibidos nas plataformas da Amazon e do Mercado Livre, as empresas podem obter os seguintes ganhos:
+
+1. Melhoria da experiência do cliente: Ao entender como os clientes percebem a qualidade dos produtos, as empresas podem identificar pontos fortes e oportunidades de melhoria em seus catálogos. Isso permite tomar ações estratégicas para aprimorar a experiência do cliente e aumentar a satisfação.
+
+2. Tomada de decisões embasada: Com base nos insights fornecidos pela análise de sentimentos dos comentários dos clientes, as empresas podem tomar decisões mais fundamentadas. Isso inclui decisões relacionadas a estratégias de produtos, gerenciamento de reputação online e atendimento ao cliente.
+
+3. Identificação de tendências e padrões: Ao analisar um grande volume de comentários dos clientes, é possível identificar tendências e padrões relacionados à percepção de qualidade dos produtos. Essas informações podem ser utilizadas para antecipar demandas e tomar decisões estratégicas de forma proativa.
+
+4. Acompanhamento da concorrência: Comparar a percepção de qualidade dos produtos entre diferentes plataformas, como Amazon e Mercado Livre, permite às empresas monitorar a posição de sua marca em relação à concorrência. Isso pode ajudar na identificação de diferenciais competitivos e na definição de estratégias de mercado.
+
+Em suma, aplicar este projeto permite que as empresas tenham uma visão abrangente e atualizada sobre como os consumidores enxergam a qualidade dos produtos em plataformas de comércio eletrônico. Isso possibilita melhorias na experiência do cliente, tomadas de decisão mais embasadas e uma posição competitiva mais forte no mercado.
+
+
 ## Funcionalidades
 - Webscraping de avaliações de produtos listados em um txt.
 - Leitura de arquivos CSV contendo os comentários de produtos da Amazon e do Mercado Livre.
