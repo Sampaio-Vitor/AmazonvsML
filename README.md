@@ -20,6 +20,10 @@ Em suma, aplicar este projeto permite que as empresas tenham uma visão abrangen
 
 ![image](https://github.com/Sampaio-Vitor/AmazonvsML/assets/110466124/38995781-0be7-4291-aae6-12e5a9f6d04b)
 
+## Exemplo de comparação de produtos:
+
+![image](https://github.com/Sampaio-Vitor/AmazonvsML/assets/110466124/8a65bcaa-f715-4227-b603-71b4b10b617f)
+
 ## Funcionalidades
 - Webscraping de avaliações de produtos listados em um txt.
 - Leitura de arquivos CSV contendo os comentários de produtos da Amazon e do Mercado Livre.
